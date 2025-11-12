@@ -1,4 +1,7 @@
-package com.example.TestDuProjetAvecSpring;
+package com.example.TestDuProjetAvecSpring.MicroServiceHotline;
+
+import com.example.TestDuProjetAvecSpring.*;
+import com.example.TestDuProjetAvecSpring.MicroServiceHopital.PersonnelMedical;
 
 public class Hotline extends Acteur {
 

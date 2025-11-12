@@ -1,5 +1,9 @@
 package com.example.TestDuProjetAvecSpring;
 
+import com.example.TestDuProjetAvecSpring.MicroServiceHopital.Ambulancier;
+import com.example.TestDuProjetAvecSpring.MicroServiceHopital.Medecin;
+import com.example.TestDuProjetAvecSpring.MicroServiceHopital.PersonnelMedical;
+import com.example.TestDuProjetAvecSpring.MicroServiceHotline.Hotline;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

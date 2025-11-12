@@ -1,4 +1,7 @@
-package com.example.TestDuProjetAvecSpring;
+package com.example.TestDuProjetAvecSpring.MicroServiceHopital;
+
+import com.example.TestDuProjetAvecSpring.Acteur;
+import com.example.TestDuProjetAvecSpring.Message;
 
 public class Medecin extends Acteur {
     @Override

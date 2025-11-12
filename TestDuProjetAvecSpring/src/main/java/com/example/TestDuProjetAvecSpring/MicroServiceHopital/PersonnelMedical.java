@@ -1,4 +1,9 @@
-package com.example.TestDuProjetAvecSpring;
+package com.example.TestDuProjetAvecSpring.MicroServiceHopital;
+
+import com.example.TestDuProjetAvecSpring.Acteur;
+import com.example.TestDuProjetAvecSpring.ActorSystem;
+import com.example.TestDuProjetAvecSpring.Message;
+import com.example.TestDuProjetAvecSpring.TypeMessage;
 
 public class PersonnelMedical extends Acteur {
 
