@@ -14,16 +14,30 @@ public class MedecinActor extends Actor {
 
     @Override
     public void onReceive(ActorMessage message) throws Exception {
-        System.out.println("Médecin reçoit le cas : " + message.getPayload());
-        
-        // Simulation de panne aléatoire pour tester la supervision
-        if (Math.random() > 0.8) {
-            throw new RuntimeException("Le médecin a glissé sur une peau de banane !");
-        }
+        afficherSeparateurDossier();
+        String dossier = message.getPayload().toString();
+        System.out.println("• 👨‍⚕️ Médecin lit le dossier : " + dossier);
 
-        // Envoi local à l'ambulancier
-        System.out.println("Médecin déclenche l'ambulance (local)");
-        ActorMessage ordre = new ActorMessage(getId(), "ambulancier-1", null, "Go chercher " + message.getPayload());
-        system.send(ordre);
+        // Analyse du cas transmis par la Hotline
+        if (dossier.startsWith("INFARCTUS")) {
+            System.out.println("• \u001B[31m Médecin : C'est un arrêt cardiaque potentiel ! J'envoie le SMUR.\u001B[0m");
+            ActorMessage ordre = new ActorMessage(getId(), "ambulancier-1", null, "SMUR - Départ Immédiat - " + dossier);
+            system.send(ordre);
+
+        } else if (dossier.startsWith("NEURO")) {
+            System.out.println("• \u001B[33m Médecin : Risque de chute. J'envoie une ambulance standard.\u001B[0m");
+            ActorMessage ordre = new ActorMessage(getId(), "ambulancier-1", null, "VSAV - Transport calme - " + dossier);
+            system.send(ordre);
+
+        } else { // Cas par défaut
+            System.out.println("• \u001B[32m Médecin : Pas d'action requise pour l'instant.\u001B[0m");
+        }
+    }
+
+    private void afficherSeparateurDossier() {
+        System.out.println("\n\n\n\n\n\n\n\n");
+        System.out.println("▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬");
+        System.out.println("                          📂  NOUVEAU DOSSIER MÉDICAL OUVERT   -   " + java.time.LocalTime.now().withNano(0));
+        System.out.println("▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬");
     }
 }
