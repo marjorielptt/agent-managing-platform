@@ -17,17 +17,17 @@ public class AmbulancierActor extends Actor {
     @Override
     public void onReceive(ActorMessage message) throws Exception {
         if ("CRASH".equals(message.getPayload())) {
-            throw new RuntimeException("• 🚨 Accident simulé ! L'ambulancier est hors service.");
+            throw new RuntimeException("• Accident simulé ! L'ambulancier est hors service.");
         }
         String ordre = message.getPayload().toString();
-        System.out.println("• 🚐 Ambulancier en route : " + ordre);
+        System.out.println("• Ambulancier en route : " + ordre);
         GestionLog.ecrire("AMBULANCE", "Départ en intervention suite ordre : " + ordre);
 
         if (!"system".equals(message.getSenderId())) {
 
             String patientId = extractPatientId(message.getPayload().toString());
 
-            ActorMessage response = new ActorMessage(getId(), patientId, "service-patient", "🚑 Tenez bon, j'arrive !");
+            ActorMessage response = new ActorMessage(getId(), patientId, "service-patient", "[AMBULANCE] Tenez bon, j'arrive !");
 
             system.send(response);
         }
