@@ -9,7 +9,11 @@ Ce projet contient également un exemple d'application du framework : le SAMU.
 
 Ce projet est inspiré du framework [Akka](https://github.com/akka/akka-core).
 
-## Tutoriel d'utilisation
+## Tutoriel d'utilisation du framework
+
+Vous trouverez le fichier jar à installer dans 
+
+## Tutoriel d'utilisation de l'exemple d'application du SAMU
 
 ### Configuration
 
