@@ -12,12 +12,12 @@ public abstract class Supervisor extends Actor {
 
     public void addSupervisedActor(Actor actor) {
         supervisedActors.add(actor);
-        System.out.println("• 👁️ Superviseur " + getId() + " surveille maintenant " + actor.getId());
+        System.out.println("• Superviseur " + getId() + " surveille maintenant " + actor.getId());
     }
 
     public void removeSupervisedActor(Actor actor) {
         supervisedActors.remove(actor);
-        System.out.println("• 👁️ Superviseur " + getId() + " ne surveille plus " + actor.getId());
+        System.out.println("• Superviseur " + getId() + " ne surveille plus " + actor.getId());
     }
 
     // Stratégie de supervision : à implémenter par les sous-classes
@@ -27,8 +27,7 @@ public abstract class Supervisor extends Actor {
     public enum SupervisionDirective {
         RESTART,
         STOP,
-        RESUME,
-        ESCALATE
+        RESUME
     }
 
     @Override
@@ -41,7 +40,7 @@ public abstract class Supervisor extends Actor {
                 .filter(a -> a.getId().equals(failedActorId))
                 .findFirst().orElse(null);
             if (failedActor != null) {
-                Throwable reason = new RuntimeException("Échec signalé"); // À adapter
+                Throwable reason = new RuntimeException("Échec signalé"); 
                 SupervisionDirective directive = handleFailure(failedActor, reason);
                 applyDirective(failedActor, directive, reason);
             }
@@ -56,15 +55,15 @@ public abstract class Supervisor extends Actor {
             case RESTART:
                 actor.preRestart(reason);
                 actor.resetFailureCount();
-                System.out.println("• 🔄 Superviseur " + getId() + " redémarre " + actor.getId());
+                System.out.println("• Superviseur " + getId() + " redémarre " + actor.getId());
                 break;
             case STOP:
                 supervisedActors.remove(actor);
-                System.out.println("• 🛑 Superviseur " + getId() + " arrête " + actor.getId());
+                System.out.println("• Superviseur " + getId() + " arrête " + actor.getId());
                 break;
             case RESUME:
                 actor.resetFailureCount();
-                System.out.println("• ▶️ Superviseur " + getId() + " reprend " + actor.getId());
+                System.out.println("• Superviseur " + getId() + " reprend " + actor.getId());
                 break;
         }
     }
