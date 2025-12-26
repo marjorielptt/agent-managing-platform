@@ -20,7 +20,7 @@ public class HotlineActor extends Actor {
         String texte = message.getPayload().toString().toLowerCase(); // Tout en minuscule pour faciliter
         String sender = message.getSenderId();
 
-        System.out.println("• 📞 Hotline analyse l'appel de " + sender);
+        System.out.println("• Hotline analyse l'appel de " + sender);
         GestionLog.ecrire("HOTLINE", "Appel reçu de " + sender + " contenant : \"" + texte + "\"");
 
         if (texte.contains("thoracique") || texte.contains("bras gauche")) {
@@ -48,7 +48,7 @@ public class HotlineActor extends Actor {
             system.send(reponse);
 
         } else {
-            System.out.println("• ❓ Incompris, demande de précision.");
+            System.out.println("• Incompris, demande de précision.");
             GestionLog.ecrire("HOTLINE", "Analyse : Message incompris, demande de précisions.");
         }
     }
@@ -56,7 +56,7 @@ public class HotlineActor extends Actor {
     private void afficherSeparateurSimu() {
         System.out.println("\n\n\n\n\n\n\n\n");
         System.out.println("▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬");
-        System.out.println("                               📥  NOUVELLE ALERTE REÇUE  -  " + java.time.LocalTime.now().withNano(0));
+        System.out.println("                                 NOUVELLE ALERTE REÇUE  -  " + java.time.LocalTime.now().withNano(0));
         System.out.println("▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬");
     }
 }
