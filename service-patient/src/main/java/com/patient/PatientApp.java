@@ -49,6 +49,8 @@ public class PatientApp {
             Scanner scanner = new Scanner(System.in);
             boolean continuer = true;
 
+            GestionLog.sautDeSection();
+
             while (continuer) {
                 clearConsole();
                 System.out.println("\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬");
