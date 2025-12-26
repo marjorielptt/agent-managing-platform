@@ -11,7 +11,7 @@ Ce projet est inspiré du framework [Akka](https://github.com/akka/akka-core).
 
 ## Tutoriel d'utilisation du framework
 
-Vous trouverez le fichier jar à installer dans 
+Vous trouverez le fichier jar à installer dans `actor-framework/target/actor-framework-1.0.0.jar`
 
 ## Tutoriel d'utilisation de l'exemple du SAMU
 
