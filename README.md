@@ -13,7 +13,7 @@ Ce projet est inspiré du framework [Akka](https://github.com/akka/akka-core).
 
 Vous trouverez le fichier jar à installer dans 
 
-## Tutoriel d'utilisation de l'exemple d'application du SAMU
+## Tutoriel d'utilisation de l'exemple du SAMU
 
 ### Configuration
 
