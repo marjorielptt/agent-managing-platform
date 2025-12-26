@@ -32,7 +32,4 @@ Dans le terminal du patient, saisir dans la console le numéro de la maladie don
 
 **Dernière version :** Décembre 2025
 
-### Auteurs
-- Gabriel Legros
-- Marjorie Lapointe
-- Arthur Neuez
+**Auteurs :** Gabriel Legros, Marjorie Lapointe, Arthur Neuez
