@@ -20,10 +20,9 @@ public abstract class Supervisor extends Actor {
         System.out.println("• Superviseur " + getId() + " ne surveille plus " + actor.getId());
     }
 
-    // Stratégie de supervision : à implémenter par les sous-classes
+    // Stratégie de supervision
     public abstract SupervisionDirective handleFailure(Actor failedActor, Throwable reason);
 
-    // Directives de supervision
     public enum SupervisionDirective {
         RESTART,
         STOP,
@@ -45,7 +44,6 @@ public abstract class Supervisor extends Actor {
                 applyDirective(failedActor, directive, reason);
             }
         } else {
-            // Traiter d'autres messages
             handleMessage(message);
         }
     }
