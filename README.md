@@ -16,9 +16,9 @@ Ce projet est inspiré du framework [Akka](https://github.com/akka/akka-core).
 - Télécharger le code source du projet et l'ouvrir dans l'IDE de votre choix.
 
 - Ouvrir un premier terminal et exécuter le fichier `discovery-server/src/main/java/com.discovery/DiscoveryApplication.java`
-- Ouvrir un deuxième terminal et exécuter le fichier `service-patient/src/main/java/com.patient/PatientApp.java`
+- Ouvrir un deuxième terminal et exécuter le fichier `service-hopital/src/main/java/com.patient/HopitalApp.java`
 - Ouvrir un troisième terminal et exécuter le fichier `service-hotline/src/main/java/com.hotline/HotlineApp.java`
-- Ouvrir un quatrième terminal et exécuter le fichier `service-hopital/src/main/java/com.patient/HopitalApp.java`
+- Ouvrir un quatrième terminal et exécuter le fichier `service-patient/src/main/java/com.patient/PatientApp.java`
 
 ### Prise en main
 
