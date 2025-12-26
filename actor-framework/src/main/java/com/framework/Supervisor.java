@@ -66,10 +66,6 @@ public abstract class Supervisor extends Actor {
                 actor.resetFailureCount();
                 System.out.println("• ▶️ Superviseur " + getId() + " reprend " + actor.getId());
                 break;
-            case ESCALATE:
-                // Escalader au superviseur parent (non implémenté ici)
-                System.out.println("• ⚠️ Superviseur " + getId() + " escalade l'échec de " + actor.getId());
-                break;
         }
     }
 
