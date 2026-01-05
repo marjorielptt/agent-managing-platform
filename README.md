@@ -31,6 +31,6 @@ Dans le terminal du patient, saisir dans la console le numéro de la maladie don
 
 ![Console display](images/menuPatient.png)
 
-**Auteurs :** Gabriel Legros, Marjorie Lapointe, Arthur Neuez   
+**Auteurs :** Gabriel Legros, Marjorie Lapointe, Arthur Neuez, Clément Otero, Thiruluxan JEYAKUMAR
 **Langage :** Java   
 **Dernière version :** Décembre 2025   
